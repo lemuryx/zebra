@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+
+  <title>What's your type</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+    .filtdata { 
+      background: black;
+      color: white;
+      font-size: 1em;
+      font-family: 'Space Grotesk', sans-serif;
+      display: flex; gap: 20px; padding: 20px; 
+    }
+    .sidebar { width: 350px; border-right: 1px solid #ccc; padding-right: 20px; }
+    .objects { 
+       flex-grow: 1; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; 
+       align-content: flex-start;
+     }
+    .card {
+       border: 1px solid #ddd; padding: 10px; border-radius: 6px; 
+     }
+    .value-toggle { cursor: pointer; padding: 4px 8px; border-radius: 4px; border: 1px solid #aaa; display: inline-block; margin: 2px; }
+    .active { background-color: #0a7; color: white; }
+  </style>
+</head>
+<body>
+
+  <div class="filtdata" x-data="filterDemo()">
+    <div class="sidebar">
+      <template x-for="(vals, prop) in filters" :key="prop">
+        <div style="margin-bottom: 20px;">
+          <h3 x-text="prop"></h3>
+          <template x-for="v in vals" :key="v">
+            <div
+              class="value-toggle"
+              :class="{ 'active': selected[prop].includes(v) }"
+              @click="toggle(prop, v)"
+              x-text="v"></div>
+          </template>
+        </div>
+      </template>
+    </div>
+
+    <div class="objects">
+      <template x-for="item in filtered" > <!-- :key="item.typeface" -->
+        <div class="card">
+          <strong x-text="item.name"></strong>
+          <div><em>typeface:</em> <span x-text="item.typeface"></span></div>
+          <div><em>publisher:</em> <span x-text="item.publisher"></span></div>
+          <div><em>source:</em> <span x-text="item.source"></span></div>
+        </div>
+      </template>
+    </div>
+  </div>
+
+<script>
+function filterDemo() {
+
+  // Extracts values of a given property from a list of objects.
+  function extract_prop(list, prop) {
+    const values = list
+      .map(item => item?.[prop])
+      .filter(v => v != null)        // drop null/undefined
+      .map(v => String(v));          // normalize for alpha sort
+
+    return [...new Set(values)]
+      .sort((a, b) => a.localeCompare(b, "cs"));
+  }
+
+  // Get data from json file
+  const data = {{ site.data.data.letters | jsonify }};
+
+  return {
+    data,
+    // filters object: property → available values
+    filters: {
+      // typeface: extract_prop(data, "typeface"), 
+      publisher: extract_prop(data, "publisher"),
+      source: extract_prop(data, "source"),
+    },
+
+    // selected values per property
+    selected: {
+      typeface: [],
+      publisher: [],
+      source: [],
+    },
+
+    toggle(prop, value) {
+      const arr = this.selected[prop];
+      if (arr.includes(value)) {
+        this.selected[prop] = arr.filter(v => v !== value);
+      } else {
+        this.selected[prop].push(value);
+      }
+    },
+
+    get filtered() {
+      return this.data.filter(item => {
+        return Object.keys(this.selected).every(prop => {
+          const selectedVals = this.selected[prop];
+          if (selectedVals.length === 0) return true;
+          return selectedVals.includes(item[prop]);
+        });
+      });
+    }
+  };
+}
+</script>
+
+  <div>
+    {%- include footer.html -%}
+  </div>
+  </body>
+</html>
