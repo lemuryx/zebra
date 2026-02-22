@@ -1,0 +1,601 @@
+fonts:
+- foundry: Suitcase typefoundry
+  id: 1
+  name: Yolo text
+- foundry: Suitcase typefoundry
+  id: 2
+  name: Yolo display
+- foundry: Suitcase typefoundry
+  id: 3
+  name: Eroticon
+- foundry: Suitcase typefoundry
+  id: 4
+  name: Icona Serif
+- foundry: Suitcase typefoundry
+  id: 5
+  name: Icona Sans
+- foundry: Suitcase typefoundry
+  id: 6
+  name: Franci
+- foundry: Suitcase typefoundry
+  id: 7
+  name: Lipo
+- foundry: Suitcase typefoundry
+  id: 8
+  name: Lipo text
+- foundry: Suitcase typefoundry
+  id: 9
+  name: Atyp Kido
+- foundry: Suitcase typefoundry
+  id: 10
+  name: Crabath
+- foundry: Suitcase typefoundry
+  id: 11
+  name: Benda
+- foundry: Suitcase typefoundry
+  id: 12
+  name: Atyp BL
+- foundry: Suitcase typefoundry
+  id: 13
+  name: Atyp
+- foundry: Suitcase typefoundry
+  id: 14
+  name: Tabac Big Slab
+- foundry: Suitcase typefoundry
+  id: 15
+  name: Tabac Big Sans
+- foundry: Suitcase typefoundry
+  id: 16
+  name: Tabac Big Glam
+- foundry: Suitcase typefoundry
+  id: 17
+  name: Tabac Big
+- foundry: Suitcase typefoundry
+  id: 18
+  name: Tabac Micro
+- foundry: Suitcase typefoundry
+  id: 19
+  name: Tabac Glam
+- foundry: Suitcase typefoundry
+  id: 20
+  name: Tabac Mono
+- foundry: Suitcase typefoundry
+  id: 21
+  name: Tabac Slab
+- foundry: Suitcase typefoundry
+  id: 22
+  name: Tabac Sans
+- foundry: Suitcase typefoundry
+  id: 23
+  name: Tabac
+- foundry: Suitcase typefoundry
+  id: 24
+  name: Jaroslav
+- foundry: Suitcase typefoundry
+  id: 25
+  name: Pepi/Rudi
+- foundry: Suitcase typefoundry
+  id: 26
+  name: Pacifista
+- foundry: Suitcase typefoundry
+  id: 27
+  name: Urban Grotesk
+- foundry: Suitcase typefoundry
+  id: 28
+  name: Ladislav
+- foundry: Suitcase typefoundry
+  id: 29
+  name: Monopol
+- foundry: Suitcase typefoundry
+  id: 30
+  name: Idealista
+- foundry: Suitcase typefoundry
+  id: 31
+  name: Kulturista
+- foundry: Suitcase typefoundry
+  id: 32
+  name: Nudista
+- foundry: Suitcase typefoundry
+  id: 33
+  name: Comenia Sans
+- foundry: Suitcase typefoundry
+  id: 34
+  name: Metalista
+- foundry: Suitcase typefoundry
+  id: 35
+  name: Bistro Script
+- foundry: Suitcase typefoundry
+  id: 36
+  name: Corpulent
+- foundry: Suitcase typefoundry
+  id: 37
+  name: Purista
+- foundry: Suitcase typefoundry
+  id: 38
+  name: Gloriola
+- foundry: Suitcase typefoundry
+  id: 39
+  name: Sandwich
+- foundry: Suitcase typefoundry
+  id: 40
+  name: Teimer
+- foundry: Suitcase typefoundry
+  id: 41
+  name: Dederon Serif
+- foundry: Suitcase typefoundry
+  id: 42
+  name: Dederon Sans
+- foundry: Suitcase typefoundry
+  id: 43
+  name: Botanika
+- foundry: Suitcase typefoundry
+  id: 44
+  name: Orgovan
+- foundry: Suitcase typefoundry
+  id: 45
+  name: Katarine
+- foundry: Suitcase typefoundry
+  id: 46
+  name: RePublic
+- foundry: Suitcase typefoundry
+  id: 47
+  name: Fishmonger
+- foundry: Suitcase typefoundry
+  id: 48
+  name: Magion
+- foundry: Suitcase typefoundry
+  id: 49
+  name: Atrament
+- foundry: Briefcase typefoundry
+  id: 50
+  name: BC Vega
+- foundry: Briefcase typefoundry
+  id: 51
+  name: BC Exalt
+- foundry: Briefcase typefoundry
+  id: 52
+  name: BC Civitas
+- foundry: Briefcase typefoundry
+  id: 53
+  name: BC Barell
+- foundry: Briefcase typefoundry
+  id: 54
+  name: BC Ludva
+- foundry: Briefcase typefoundry
+  id: 55
+  name: BC Monument
+- foundry: Briefcase typefoundry
+  id: 56
+  name: BC Unciala
+- foundry: Briefcase typefoundry
+  id: 57
+  name: BC Vajgar
+- foundry: Briefcase typefoundry
+  id: 58
+  name: BC Figural
+- foundry: Briefcase typefoundry
+  id: 59
+  name: BC Parlament
+- foundry: Briefcase typefoundry
+  id: 60
+  name: BC Eric Machat
+- foundry: Briefcase typefoundry
+  id: 61
+  name: BC Retroduktor
+- foundry: Briefcase typefoundry
+  id: 62
+  name: BC Orion
+- foundry: Briefcase typefoundry
+  id: 63
+  name: BC Minim
+- foundry: Briefcase typefoundry
+  id: 64
+  name: BC Baseline
+- foundry: Briefcase typefoundry
+  id: 65
+  name: BC 3018
+- foundry: Briefcase typefoundry
+  id: 66
+  name: BC Brief
+- foundry: Briefcase typefoundry
+  id: 67
+  name: BC Novatica
+- foundry: Briefcase typefoundry
+  id: 68
+  name: BC Novatica TXT
+- foundry: Briefcase typefoundry
+  id: 69
+  name: BC Sklonar
+- foundry: Briefcase typefoundry
+  id: 70
+  name: BC Mikser
+- foundry: Briefcase typefoundry
+  id: 71
+  name: BC Alphapipe
+- foundry: Briefcase typefoundry
+  id: 72
+  name: BC Liguria
+- foundry: Briefcase typefoundry
+  id: 73
+  name: BC Reformulate
+- foundry: Briefcase typefoundry
+  id: 74
+  name: BC Falster Grotesk
+- foundry: Briefcase typefoundry
+  id: 75
+  name: BC Merkur
+- foundry: Briefcase typefoundry
+  id: 76
+  name: BC Prkno
+- foundry: Briefcase typefoundry
+  id: 77
+  name: BC Rebecca
+- foundry: Briefcase typefoundry
+  id: 78
+  name: BC Reflex
+- foundry: Briefcase typefoundry
+  id: 79
+  name: BC Rezan
+- foundry: Briefcase typefoundry
+  id: 80
+  name: BC Sijan
+- foundry: Briefcase typefoundry
+  id: 81
+  name: BC Thomas & Ruhler
+- foundry: Briefcase typefoundry
+  id: 82
+  name: BC Trhan
+- foundry: Briefcase typefoundry
+  id: 83
+  name: BC Vafle
+- foundry: Displaay
+  id: 84
+  name: Coxx
+- foundry: Displaay
+  id: 85
+  name: Boonton
+- foundry: Displaay
+  id: 86
+  name: Serrrif
+- foundry: Displaay
+  id: 87
+  name: Season
+- foundry: Displaay
+  id: 88
+  name: Fenul
+- foundry: Displaay
+  id: 89
+  name: Perfekkta
+- foundry: Displaay
+  id: 90
+  name: Concrette
+- foundry: Displaay
+  id: 91
+  name: Jokker
+- foundry: Displaay
+  id: 92
+  name: Bagoss
+- foundry: Displaay
+  id: 93
+  name: Azaret
+- foundry: Displaay
+  id: 94
+  name: Avantt
+- foundry: Displaay
+  id: 95
+  name: Denim
+- foundry: Displaay
+  id: 96
+  name: Ofform
+- foundry: Displaay
+  id: 97
+  name: Saans
+- foundry: Displaay
+  id: 98
+  name: Greed
+- foundry: Displaay
+  id: 99
+  name: Haffer
+- foundry: Displaay
+  id: 100
+  name: Teodor
+- foundry: Displaay
+  id: 101
+  name: Tobias
+- foundry: Displaay
+  id: 102
+  name: Roobert
+- foundry: Displaay
+  id: 103
+  name: Lazzer
+- foundry: Displaay
+  id: 104
+  name: Dazzed
+- foundry: Displaay
+  id: 105
+  name: Documan
+- foundry: Displaay
+  id: 106
+  name: Wallop
+- foundry: Displaay
+  id: 107
+  name: Reckless
+- foundry: Displaay
+  id: 108
+  name: Matter
+- foundry: Displaay
+  id: 109
+  name: Fellix
+- foundry: Displaay
+  id: 110
+  name: Gellix
+- foundry: Displaay
+  id: 111
+  name: Hellix
+- foundry: Displaay
+  id: 112
+  name: Yellix
+- foundry: Štorm Type Foundry
+  id: 113
+  name: Academica
+- foundry: Štorm Type Foundry
+  id: 114
+  name: Albrijes
+- foundry: Štorm Type Foundry
+  id: 115
+  name: Amor Serif
+- foundry: Štorm Type Foundry
+  id: 116
+  name: Andulka
+- foundry: Štorm Type Foundry
+  id: 117
+  name: Anselm Serif
+- foundry: Štorm Type Foundry
+  id: 118
+  name: Antique
+- foundry: Štorm Type Foundry
+  id: 119
+  name: Areplos
+- foundry: Štorm Type Foundry
+  id: 120
+  name: Baskerville Neo
+- foundry: Štorm Type Foundry
+  id: 121
+  name: Baskerville Original
+- foundry: Štorm Type Foundry
+  id: 122
+  name: Beletria
+- foundry: Štorm Type Foundry
+  id: 123
+  name: Biblon Neo
+- foundry: Štorm Type Foundry
+  id: 124
+  name: Bohemic Sans a serif
+- foundry: Štorm Type Foundry
+  id: 125
+  name: Carot Display
+- foundry: Štorm Type Foundry
+  id: 126
+  name: Carot Slab
+- foundry: Štorm Type Foundry
+  id: 127
+  name: Clara serif
+- foundry: Štorm Type Foundry
+  id: 128
+  name: Commenia Serif pro
+- foundry: Štorm Type Foundry
+  id: 129
+  name: Defender
+- foundry: Štorm Type Foundry
+  id: 130
+  name: Ermina
+- foundry: Štorm Type Foundry
+  id: 131
+  name: Etelka Slab
+- foundry: Štorm Type Foundry
+  id: 132
+  name: Farao
+- foundry: Štorm Type Foundry
+  id: 133
+  name: Genre
+- foundry: Štorm Type Foundry
+  id: 134
+  name: Hercules
+- foundry: Štorm Type Foundry
+  id: 135
+  name: Jannon Antiqua
+- foundry: Štorm Type Foundry
+  id: 136
+  name: Jannon Neo
+- foundry: Štorm Type Foundry
+  id: 137
+  name: Juvenis
+- foundry: Štorm Type Foundry
+  id: 138
+  name: Kingdom
+- foundry: Štorm Type Foundry
+  id: 139
+  name: Lexon
+- foundry: Štorm Type Foundry
+  id: 140
+  name: Lido STF
+- foundry: Štorm Type Foundry
+  id: 141
+  name: mediaeval
+- foundry: Štorm Type Foundry
+  id: 142
+  name: Mramor
+- foundry: Štorm Type Foundry
+  id: 143
+  name: Pentagraf
+- foundry: Štorm Type Foundry
+  id: 144
+  name: Pepone
+- foundry: Štorm Type Foundry
+  id: 145
+  name: Preissig Antikva
+- foundry: Štorm Type Foundry
+  id: 146
+  name: Preissig Poster
+- foundry: Štorm Type Foundry
+  id: 147
+  name: Quercus Serif
+- foundry: Štorm Type Foundry
+  id: 148
+  name: Quercus Ten
+- foundry: Štorm Type Foundry
+  id: 149
+  name: Regent
+- foundry: Štorm Type Foundry
+  id: 150
+  name: Regula
+- foundry: Štorm Type Foundry
+  id: 151
+  name: Serapion
+- foundry: Štorm Type Foundry
+  id: 152
+  name: Tenebra
+- foundry: Štorm Type Foundry
+  id: 153
+  name: Trivia Humanist
+- foundry: Štorm Type Foundry
+  id: 154
+  name: Trivia Serif
+- foundry: Štorm Type Foundry
+  id: 155
+  name: Trivia Serif 10
+- foundry: Štorm Type Foundry
+  id: 156
+  name: Trivia Slab
+- foundry: Štorm Type Foundry
+  id: 157
+  name: Tusar
+- foundry: Štorm Type Foundry
+  id: 158
+  name: Týfa Antikva
+- foundry: Štorm Type Foundry
+  id: 159
+  name: Walbaum 2010 Pro
+- foundry: Štorm Type Foundry
+  id: 160
+  name: Reliable Scientific
+- foundry: Štorm Type Foundry
+  id: 161
+  name: Armor Sans Neo
+- foundry: Štorm Type Foundry
+  id: 162
+  name: Amphibia
+- foundry: Štorm Type Foundry
+  id: 163
+  name: Andulka Sans
+- foundry: Štorm Type Foundry
+  id: 164
+  name: Anselm Sans
+- foundry: Štorm Type Foundry
+  id: 165
+  name: Banhof Neo
+- foundry: Štorm Type Foundry
+  id: 166
+  name: Beletrio
+- foundry: Štorm Type Foundry
+  id: 167
+  name: Carot Mono
+- foundry: Štorm Type Foundry
+  id: 168
+  name: Carot Sans
+- foundry: Štorm Type Foundry
+  id: 169
+  name: Clara Sans
+- foundry: Štorm Type Foundry
+  id: 170
+  name: Dyna Grotesk
+- foundry: Štorm Type Foundry
+  id: 171
+  name: Etelka
+- foundry: Štorm Type Foundry
+  id: 172
+  name: Header
+- foundry: Štorm Type Foundry
+  id: 173
+  name: Hercules Sans
+- foundry: Štorm Type Foundry
+  id: 174
+  name: Iniciaa
+- foundry: Štorm Type Foundry
+  id: 175
+  name: Abalda
+- foundry: Štorm Type Foundry
+  id: 176
+  name: Aichel
+- foundry: Štorm Type Foundry
+  id: 177
+  name: Alcoholica
+- foundry: Štorm Type Foundry
+  id: 178
+  name: Andaluz
+- foundry: Štorm Type Foundry
+  id: 179
+  name: Bhang
+- foundry: Štorm Type Foundry
+  id: 180
+  name: Brauer
+- foundry: Štorm Type Foundry
+  id: 181
+  name: Briefmarken
+- foundry: Štorm Type Foundry
+  id: 182
+  name: Clichee
+- foundry: Štorm Type Foundry
+  id: 183
+  name: Cobra
+- foundry: Štorm Type Foundry
+  id: 184
+  name: Compur
+- foundry: Štorm Type Foundry
+  id: 185
+  name: Enamelplate
+- foundry: Štorm Type Foundry
+  id: 186
+  name: Exelsor Script
+- foundry: Štorm Type Foundry
+  id: 187
+  name: Fenix
+- foundry: Štorm Type Foundry
+  id: 188
+  name: Friedhof
+- foundry: Štorm Type Foundry
+  id: 189
+  name: Galluz Konzept
+- foundry: Štorm Type Foundry
+  id: 190
+  name: Coroner
+- foundry: Štorm Type Foundry
+  id: 191
+  name: Dracula
+- foundry: Štorm Type Foundry
+  id: 192
+  name: Dream within a dream
+- foundry: Štorm Type Foundry
+  id: 193
+  name: Hexenrunen
+- foundry: Štorm Type Foundry
+  id: 194
+  name: Julinka
+- foundry: Štorm Type Foundry
+  id: 195
+  name: Monarchia
+- foundry: Štorm Type Foundry
+  id: 196
+  name: Moyanage
+- foundry: Štorm Type Foundry
+  id: 197
+  name: Moyanage sans
+- foundry: Štorm Type Foundry
+  id: 198
+  name: Plagwitz
+- foundry: Štorm Type Foundry
+  id: 199
+  name: Spiuritist
+- foundry: Štorm Type Foundry
+  id: 200
+  name: Wittingau
