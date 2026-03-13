@@ -62,15 +62,26 @@
 <script>
 function filterDemo() {
 
+  const Locale = "cs";
+
   // Extracts values of a given property from a list of objects.
-  function extract_prop(list, prop) {
+  function extract_prop(list, prop, loc) {
     const values = list
       .map(item => item?.[prop])
       .filter(v => v != null)        // drop null/undefined
       .map(v => String(v));          // normalize for alpha sort
 
     return [...new Set(values)]
-      .sort((a, b) => a.localeCompare(b, "cs"));
+      .sort((a, b) => a.localeCompare(b, loc));
+  }
+
+  function extract_prop_int(list, prop) {
+    const values = list
+      .map(item => item?.[prop])
+      .filter(v => v != null);        // drop null/undefined
+
+    return [...new Set(values)]
+      .sort((a, b) => a - b);
   }
 
   // Get data from json file
@@ -81,8 +92,8 @@ function filterDemo() {
     // filters object: property → available values
     filters: {
       // typeface: extract_prop(data, "typeface"), 
-      foundry: extract_prop(data, "foundry"),
-      id: extract_prop(data, "id"),
+      foundry: extract_prop(data, "foundry", Locale),
+      id: extract_prop_int(data, "id"),
     },
 
     // selected values per property
