@@ -398,8 +398,8 @@
     <template x-for="filter in filterDefs" :key="filter.key">
       <div class="menu-item" :data-open="openMenu === filter.key">
 
-        <!-- ── multiselect: dropdown with checkboxes ── -->
-        <template x-if="filter.type === 'multiselect'">
+        <!-- ── multiselect / multilist: dropdown with checkboxes ── -->
+        <template x-if="filter.type === 'multiselect' || filter.type === 'multilist'">
           <div style="display:contents">
             <button class="menu-trigger"
                     @click.stop="openMenu = openMenu === filter.key ? null : filter.key">
@@ -454,8 +454,8 @@
     <div class="active-filters" x-show="hasActiveFilters">
       <template x-for="filter in filterDefs" :key="filter.key">
 
-        <!-- multiselect: one pill per selected value -->
-        <template x-if="filter.type === 'multiselect'">
+        <!-- multiselect / multilist: one pill per selected value -->
+        <template x-if="filter.type === 'multiselect' || filter.type === 'multilist'">
           <template x-for="val in activeSelections(filter.key)" :key="filter.key + '-' + val">
             <span class="filter-pill">
               <span x-text="filter.label + ': ' + val"></span>
@@ -530,13 +530,14 @@
 
   <!-- ═══ FOOTER ════════════════════════════════════════════ -->
   <footer>
-    <p><strong>What's Your Type</strong> &mdash; powered by Alpine.js &amp; Jekyll data</p>
-    <p>Data source: <code>Vali Productions</code></p>
+    <p><strong>Font Library</strong> &mdash; powered by Alpine.js &amp; Jekyll data</p>
+    <p>Data source: <code>_data/fonts.yml</code></p>
     <p x-text="'Total entries: ' + fonts.length"></p>
   </footer>
 
   <!-- ═══ ALPINE APP ════════════════════════════════════════ -->
   <script>
+
     const data = {{ site.data.fonts2.fonts | jsonify }};
 
     /* ══════════════════════════════════════════════════════════
@@ -544,8 +545,8 @@
      * ══════════════════════════════════════════════════════════
      * Controls which fields appear on each card and in what order.
      *
-     *   key       {string}   – property name on font object
-     *   label     {string}   – display label
+     *   id        {string}   – property name on font object
+     *   title     {string}   – display label
      *   highlight {boolean}  – render value in accent colour
      */
     const cardProperties = {{ site.data.fonts2.cols | jsonify }};
@@ -568,6 +569,11 @@
      *     'boolean'      → inline checkbox.
      *                      When checked, keeps only fonts where [key] === true.
      *
+     *     'multilist'    → dropdown of distinct values drawn from array-valued
+     *                      properties. A font matches when its list contains
+     *                      ALL selected values (AND semantics).
+     *                      Empty selection = no constraint.
+     *
      * To add e.g. a Classification filter, just append:
      *   { key: 'classification', label: 'Classification', type: 'multiselect' }
      */
@@ -576,11 +582,11 @@
       { key: 'type_foundry',     label: 'Písmolijna',      type: 'multiselect' },
       { key: 'variable_font',    label: 'Variabilní',      type: 'multiselect' },
       { key: 'trials_opensource', label: 'Trialy/Open-source',   type: 'multiselect' },
-      { key: 'width_proportion',  label: 'Šířková proporce',     type: 'multiselect' },
-      { key: 'type_style',        label: 'Charakter',            type: 'multiselect' },
-      { key: 'character',         label: 'Doplňující charakter', type: 'multiselect' },
-      { key: 'usage',             label: 'Užití',                type: 'multiselect' },
-      { key: 'platform',          label: 'Platforma',            type: 'multiselect' },
+      { key: 'width_proportion',  label: 'Šířková proporce',     type: 'multilist' },
+      { key: 'type_style',        label: 'Charakter',            type: 'multilist' },
+      { key: 'character',         label: 'Doplňující charakter', type: 'multilist' },
+      { key: 'usage',             label: 'Užití',                type: 'multilist' },
+      { key: 'platform',          label: 'Platforma',            type: 'multilist' },
       // { key: '', label: '', type: 'multiselect' },
       // { key: 'variable_font',  label: 'Variable Font',  type: 'boolean'     },
     ];
@@ -623,14 +629,16 @@
           else            arr.splice(idx, 1);
         },
 
-        /** Sorted distinct non-empty values of `key` across all fonts. */
+        /** Sorted distinct non-empty values of `key` across all fonts.
+         *  For multilist properties the per-font arrays are flattened first. */
         uniqueValues(key) {
+          const filter = this.filterDefs.find(f => f.key === key);
+          const isMultilist = filter && filter.type === 'multilist';
+          const raw = isMultilist
+            ? this.fonts.flatMap(f => Array.isArray(f[key]) ? f[key] : [])
+            : this.fonts.map(f => f[key]);
           return [
-            ...new Set(
-              this.fonts
-                .map(f => f[key])
-                .filter(v => v !== null && v !== undefined && v !== '')
-            )
+            ...new Set(raw.filter(v => v !== null && v !== undefined && v !== ''))
           ].sort((a, b) => String(a).localeCompare(String(b)));
         },
 
@@ -646,6 +654,12 @@
                   const sel = this.selections[filter.key] || [];
                   return sel.length === 0 || sel.includes(font[filter.key]);
                 }
+                case 'multilist': {
+                  const sel = this.selections[filter.key] || [];
+                  if (sel.length === 0) return true;
+                  const list = Array.isArray(font[filter.key]) ? font[filter.key] : [];
+                  return sel.every(v => list.includes(v)); // AND: font must have ALL selected tags
+                }
                 case 'boolean':
                   return !this.selections[filter.key] || font[filter.key] === true;
                 default:
@@ -659,6 +673,7 @@
           return this.filterDefs.some(filter => {
             switch (filter.type) {
               case 'multiselect': return (this.selections[filter.key] || []).length > 0;
+              case 'multilist':   return (this.selections[filter.key] || []).length > 0;
               case 'boolean':     return !!this.selections[filter.key];
               default:            return false;
             }
@@ -669,6 +684,7 @@
           this.filterDefs.forEach(filter => {
             switch (filter.type) {
               case 'multiselect': this.selections[filter.key] = []; break;
+              case 'multilist':   this.selections[filter.key] = []; break;
               case 'boolean':     this.selections[filter.key] = false; break;
             }
           });
@@ -679,6 +695,7 @@
          * ────────────────────────────────────────────── */
         formatValue(val) {
           if (val === null || val === undefined || val === '') return '—';
+          if (Array.isArray(val)) return val.length ? val.join(', ') : '—';
           if (typeof val === 'boolean') return val ? 'Yes' : 'No';
           return val;
         },
@@ -690,7 +707,7 @@
           // Build the reactive selections object from filterDefs
           const sel = {};
           filterDefs.forEach(filter => {
-            sel[filter.key] = filter.type === 'multiselect' ? [] : false;
+            sel[filter.key] = (filter.type === 'multiselect' || filter.type === 'multilist') ? [] : false;
           });
           this.selections = sel;
           this.fonts = data;
