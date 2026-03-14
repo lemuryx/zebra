@@ -1,132 +1,702 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="en" x-data="fontApp()" x-init="init()">
+<head>
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <title>Font Library</title>
 
-  <title>What's your type</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
   <style>
-    .filtdata { 
-      background: black;
-      color: white;
-      font-size: 1em;
-      font-family: 'Space Grotesk', sans-serif;
-      display: flex; gap: 20px; padding: 20px; 
+    /* ── Design tokens ─────────────────────────────── */
+    :root {
+      --ink:        #0d0d0d;
+      --paper:      #f5f0e8;
+      --rule:       #c8bfaa;
+      --muted:      #8a8070;
+      --accent:     #c0392b;
+      --accent-bg:  #f9ece9;
+      --card-bg:    #ffffff;
+      --shadow:     0 1px 4px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
+      --radius:     4px;
+      --mono:       'DM Mono', monospace;
+      --serif:      'DM Serif Display', serif;
     }
-    .sidebar { width: 350px; border-right: 1px solid #ccc; padding-right: 20px; }
-    .objects { 
-       flex-grow: 1; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; 
-       align-content: flex-start;
-     }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ───────────────────────────────────── */
+    .site-header {
+      border-bottom: 2px solid var(--ink);
+      padding: 28px 40px 20px;
+      background: var(--paper);
+    }
+    .site-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -.01em;
+    }
+    .site-header h1 em { font-style: italic; color: var(--accent); }
+    .site-header p {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    /* ── Menu bar ─────────────────────────────────── */
+    /*
+     * flex-wrap: wrap  lets items spill to a second (third…) line
+     * automatically as more filters are added — no code change needed.
+     * Each row auto-sizes to its content height.
+     * The .menu-end sentinel uses margin-left:auto to stay right-aligned
+     * on whatever line it ends up on.
+     */
+    .menu-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      padding: 0 40px;
+      border-bottom: 1px solid #333;
+    }
+
+    /* ── Generic menu item wrapper ─────────────────── */
+    .menu-item {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+    }
+
+    /* Trigger button (multiselect) */
+    .menu-trigger {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 13px 18px;
+      background: none;
+      border: none;
+      border-right: 1px solid #333;
+      color: var(--paper);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .15s;
+      height: 100%;
+    }
+    .menu-trigger:hover,
+    .menu-item[data-open="true"] .menu-trigger { background: #1e1e1e; }
+
+    .menu-trigger .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 4px;
+      border-radius: 9px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 500;
+    }
+    .menu-trigger .arrow {
+      font-size: 9px;
+      opacity: .55;
+      transition: transform .2s;
+    }
+    .menu-item[data-open="true"] .menu-trigger .arrow { transform: rotate(180deg); }
+
+    /* ── Multiselect dropdown panel ────────────────── */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-top: 2px solid var(--accent);
+      box-shadow: var(--shadow);
+      z-index: 300;
+      max-height: 320px;
+      overflow-y: auto;
+    }
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid #f0ece4;
+      transition: background .1s;
+      color: var(--ink);
+      user-select: none;
+    }
+    .dropdown-item:last-child { border-bottom: none; }
+    .dropdown-item:hover      { background: var(--accent-bg); }
+    .dropdown-item.selected   { background: var(--accent-bg); color: var(--accent); font-weight: 500; }
+
+    .check-box {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid var(--rule);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: #fff;
+      transition: all .15s;
+      font-size: 9px;
+      line-height: 1;
+      color: transparent;
+    }
+    .dropdown-item.selected .check-box {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* ── Boolean (checkbox) menu item ─────────────── */
+    .menu-bool {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 18px;
+      border-right: 1px solid #333;
+      cursor: pointer;
+      color: var(--paper);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      transition: background .15s;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .menu-bool:hover          { background: #1e1e1e; }
+    .menu-bool.active         { color: #f5a99b; }
+    .menu-bool input[type="checkbox"] {
+      accent-color: var(--accent);
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+    }
+
+    /* ── End cluster (count + clear) ───────────────── */
+    .menu-end {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+    .menu-count {
+      padding: 0 18px;
+      font-size: 11px;
+      letter-spacing: .08em;
+      color: #999;
+      white-space: nowrap;
+    }
+    .menu-count strong { color: var(--paper); }
+
+    .clear-btn {
+      display: flex;
+      align-items: center;
+      padding: 13px 16px;
+      background: none;
+      border: none;
+      border-left: 1px solid #333;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      cursor: pointer;
+      transition: color .15s;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+    .clear-btn:hover { color: var(--accent); }
+
+    /* ── Main ─────────────────────────────────────── */
+    main { flex: 1; padding: 40px 40px 60px; }
+
+    .results-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 28px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .results-header h2 { font-family: var(--serif); font-size: 1.3rem; font-style: italic; }
+    .results-header span { color: var(--muted); font-size: 11px; letter-spacing: .08em; }
+
+    /* Active filter pills */
+    .active-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px 4px 12px;
+      background: var(--accent-bg);
+      color: var(--accent);
+      border: 1px solid #e8b3ac;
+      border-radius: 20px;
+      font-size: 11px;
+      letter-spacing: .04em;
+    }
+    .filter-pill button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--accent);
+      font-size: 13px;
+      line-height: 1;
+      padding: 0;
+      opacity: .7;
+    }
+    .filter-pill button:hover { opacity: 1; }
+
+    /* Cards */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
     .card {
-       border: 1px solid #ddd; padding: 10px; border-radius: 6px; 
-     }
-    .value-toggle { cursor: pointer; padding: 4px 8px; border-radius: 4px; border: 1px solid #aaa; display: inline-block; margin: 2px; }
-    .active { background-color: #0a7; color: white; }
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,.1), 0 12px 28px rgba(0,0,0,.08);
+    }
+    .card-header {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 14px 18px 12px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      text-decoration: none;
+      transition: background .15s;
+    }
+    .card-header:is(a):hover { background: #1e1e1e; }
+    .card-header:is(a):hover h3 { text-decoration: underline; text-underline-offset: 3px; }
+    .card-header h3 { font-family: var(--serif); font-size: 1.1rem; line-height: 1.2; font-style: italic; color: var(--paper); }
+    .var-badge {
+      flex-shrink: 0;
+      padding: 2px 8px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      margin-top: 3px;
+    }
+    .card-body { padding: 14px 18px; }
+    .prop-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 12px;
+      padding: 7px 0;
+      border-bottom: 1px solid #f0ece4;
+      align-items: baseline;
+    }
+    .prop-row:last-child { border-bottom: none; }
+    .prop-key { color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+    .prop-val { color: var(--ink); font-size: 12px; font-weight: 500; word-break: break-word; }
+    .prop-val.highlight  { color: var(--accent); }
+    .prop-val.bool-true  { color: #27ae60; }
+    .prop-val.bool-false { color: var(--muted); }
+
+    /* Empty state */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 80px 20px;
+      color: var(--muted);
+    }
+    .empty-state .icon { font-size: 3rem; margin-bottom: 16px; opacity: .4; }
+    .empty-state h3 { font-family: var(--serif); font-size: 1.4rem; font-style: italic; margin-bottom: 8px; color: var(--ink); }
+
+    /* ── Footer ───────────────────────────────────── */
+    footer {
+      border-top: 2px solid var(--ink);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--paper);
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    footer p { font-size: 11px; color: var(--muted); letter-spacing: .06em; }
+    footer p strong { color: var(--ink); }
+
+    /* Click-outside overlay */
+    .overlay { position: fixed; inset: 0; z-index: 50; }
+
+    /* Scrollbar */
+    .dropdown::-webkit-scrollbar       { width: 4px; }
+    .dropdown::-webkit-scrollbar-track { background: #f5f0e8; }
+    .dropdown::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 2px; }
   </style>
 </head>
+
 <body>
 
-  <div class="filtdata" x-data="filterDemo()">
-    <div class="sidebar">
-      <template x-for="(vals, prop) in filters" :key="prop">
-        <div style="margin-bottom: 20px;">
-          <h3 x-text="prop"></h3>
-          <template x-for="v in vals" :key="v">
-            <div
-              class="value-toggle"
-              :class="{ 'active': selected[prop].includes(v) }"
-              @click="toggle(prop, v)"
-              x-text="v"></div>
+  <!-- ═══ HEADER ════════════════════════════════════════════ -->
+  <header class="site-header">
+    <h1>What's Your <em>Type</em></h1>
+    <p>Type foundry reference &mdash; browse, filter &amp; explore</p>
+  </header>
+
+  <!-- ═══ MENU BAR ═════════════════════════════════════════ -->
+
+  <!-- Click-outside overlay closes any open dropdown -->
+  <template x-if="openMenu !== null">
+    <div class="overlay" @click="openMenu = null"></div>
+  </template>
+
+  <nav class="menu-bar">
+
+    <!--
+      The entire menu is driven by filterDefs — one <template x-for> renders
+      every filter type. To add a new filter just append to filterDefs in JS.
+    -->
+    <template x-for="filter in filterDefs" :key="filter.key">
+      <div class="menu-item" :data-open="openMenu === filter.key">
+
+        <!-- ── multiselect: dropdown with checkboxes ── -->
+        <template x-if="filter.type === 'multiselect'">
+          <div style="display:contents">
+            <button class="menu-trigger"
+                    @click.stop="openMenu = openMenu === filter.key ? null : filter.key">
+              <span x-text="filter.label"></span>
+              <span class="badge"
+                    x-show="activeSelections(filter.key).length > 0"
+                    x-text="activeSelections(filter.key).length"></span>
+              <span class="arrow">▾</span>
+            </button>
+            <div class="dropdown" x-show="openMenu === filter.key" @click.stop>
+              <template x-for="option in uniqueValues(filter.key)" :key="option">
+                <div class="dropdown-item"
+                     :class="{ selected: activeSelections(filter.key).includes(option) }"
+                     @click="toggleMulti(filter.key, option)">
+                  <div class="check-box" x-text="activeSelections(filter.key).includes(option) ? '✓' : ''"></div>
+                  <span x-text="option"></span>
+                </div>
+              </template>
+            </div>
+          </div>
+        </template>
+
+        <!-- ── boolean: inline checkbox label ── -->
+        <template x-if="filter.type === 'boolean'">
+          <label class="menu-bool" :class="{ active: selections[filter.key] }">
+            <input type="checkbox"
+                   :checked="selections[filter.key]"
+                   @change="selections[filter.key] = $event.target.checked" />
+            <span x-text="filter.label"></span>
+          </label>
+        </template>
+
+      </div>
+    </template>
+
+    <!-- End cluster: result count + clear button -->
+    <div class="menu-end">
+      <div class="menu-count">
+        <strong x-text="filteredFonts.length"></strong>
+        &thinsp;/&thinsp;
+        <span x-text="fonts.length"></span>&nbsp;fonts
+      </div>
+      <button class="clear-btn" x-show="hasActiveFilters" @click="clearFilters">✕ Clear</button>
+    </div>
+
+  </nav>
+
+  <!-- ═══ MAIN CONTENT ══════════════════════════════════════ -->
+  <main>
+
+    <!-- Active filter pills — also fully driven by filterDefs -->
+    <div class="active-filters" x-show="hasActiveFilters">
+      <template x-for="filter in filterDefs" :key="filter.key">
+
+        <!-- multiselect: one pill per selected value -->
+        <template x-if="filter.type === 'multiselect'">
+          <template x-for="val in activeSelections(filter.key)" :key="filter.key + '-' + val">
+            <span class="filter-pill">
+              <span x-text="filter.label + ': ' + val"></span>
+              <button @click="toggleMulti(filter.key, val)">×</button>
+            </span>
           </template>
-        </div>
+        </template>
+
+        <!-- boolean: one pill when checked -->
+        <template x-if="filter.type === 'boolean' && selections[filter.key]">
+          <span class="filter-pill">
+            <span x-text="filter.label"></span>
+            <button @click="selections[filter.key] = false">×</button>
+          </span>
+        </template>
+
       </template>
     </div>
 
-    <div class="objects">
-      <template x-for="item in filtered" > <!-- :key="item.typeface" -->
+    <!-- Results header -->
+    <div class="results-header">
+      <h2 x-text="filteredFonts.length === fonts.length ? 'All fonts' : 'Filtered results'"></h2>
+      <span x-text="filteredFonts.length + ' entries'"></span>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="cards-grid">
+
+      <template x-if="filteredFonts.length === 0">
+        <div class="empty-state">
+          <div class="icon">◎</div>
+          <h3>No fonts match your filters</h3>
+          <p>Try removing some selections to widen the results.</p>
+        </div>
+      </template>
+
+      <template x-for="(font, idx) in filteredFonts" :key="idx">
         <div class="card">
-          <strong x-text="item.name"></strong>
-          <div><em>id:</em> <span x-text="item.id"></span></div>
-          <div><em>foundry:</em> <span x-text="item.foundry"></span></div>
-          <!-- div><em>source:</em> <span x-text="item.source"></span></div -->
+          <template x-if="font.url">
+            <a class="card-header" :href="font.url" target="_blank" rel="noopener">
+              <h3 x-text="font.font_name || '—'"></h3>
+              <span class="var-badge" x-show="font.variable_font">Variable</span>
+            </a>
+          </template>
+          <template x-if="!font.url">
+            <div class="card-header">
+              <h3 x-text="font.font_name || '—'"></h3>
+              <span class="var-badge" x-show="font.variable_font">Variable</span>
+            </div>
+          </template>
+          <div class="card-body">
+            <template x-for="prop in cardProperties" :key="prop.id">
+              <div class="prop-row"
+                   x-show="font[prop.id] !== undefined && font[prop.id] !== null && font[prop.id] !== ''">
+                <span class="prop-key" x-text="prop.title"></span>
+                <span class="prop-val"
+                      :class="{
+                        'highlight':  prop.highlight,
+                        'bool-true':  typeof font[prop.id] === 'boolean' &&  font[prop.id],
+                        'bool-false': typeof font[prop.id] === 'boolean' && !font[prop.id]
+                      }"
+                      x-text="formatValue(font[prop.id])">
+                </span>
+              </div>
+            </template>
+          </div>
         </div>
       </template>
+
     </div>
-  </div>
+  </main>
 
-<script>
-function filterDemo() {
+  <!-- ═══ FOOTER ════════════════════════════════════════════ -->
+  <footer>
+    <p><strong>What's Your Type</strong> &mdash; powered by Alpine.js &amp; Jekyll data</p>
+    <p>Data source: <code>Vali Productions</code></p>
+    <p x-text="'Total entries: ' + fonts.length"></p>
+  </footer>
 
-  const Locale = "cs";
+  <!-- ═══ ALPINE APP ════════════════════════════════════════ -->
+  <script>
+    const data = {{ site.data.fonts2.fonts | jsonify }};
 
-  // Extracts values of a given property from a list of objects.
-  function extract_prop(list, prop, loc) {
-    const values = list
-      .map(item => item?.[prop])
-      .filter(v => v != null)        // drop null/undefined
-      .map(v => String(v));          // normalize for alpha sort
+    /* ══════════════════════════════════════════════════════════
+     * CARD PROPERTIES
+     * ══════════════════════════════════════════════════════════
+     * Controls which fields appear on each card and in what order.
+     *
+     *   key       {string}   – property name on font object
+     *   label     {string}   – display label
+     *   highlight {boolean}  – render value in accent colour
+     */
+    const cardProperties = {{ site.data.fonts2.cols | jsonify }};
 
-    return [...new Set(values)]
-      .sort((a, b) => a.localeCompare(b, loc));
-  }
+    /* ══════════════════════════════════════════════════════════
+     * FILTER DEFINITIONS  ← the only place you need to edit
+     *                       to add / remove / reorder filters
+     * ══════════════════════════════════════════════════════════
+     *
+     * Each object describes one menu item:
+     *
+     *   key   {string}  – matches the property name on font objects
+     *   label {string}  – text shown in the menu button and filter pills
+     *   type  {string}  – controls rendering AND filter logic:
+     *
+     *     'multiselect'  → dropdown list of distinct values, multi-select.
+     *                      Keeps fonts whose [key] is in the selected set.
+     *                      Empty selection = no constraint.
+     *
+     *     'boolean'      → inline checkbox.
+     *                      When checked, keeps only fonts where [key] === true.
+     *
+     * To add e.g. a Classification filter, just append:
+     *   { key: 'classification', label: 'Classification', type: 'multiselect' }
+     */
+    const filterDefs = [
+      //{ key: 'font_name',      label: 'Font Name',       type: 'multiselect' },
+      { key: 'type_foundry',     label: 'Písmolijna',      type: 'multiselect' },
+      { key: 'variable_font',    label: 'Variabilní',      type: 'multiselect' },
+      { key: 'trials_opensource', label: 'Trialy/Open-source',   type: 'multiselect' },
+      { key: 'width_proportion',  label: 'Šířková proporce',     type: 'multiselect' },
+      { key: 'type_style',        label: 'Charakter',            type: 'multiselect' },
+      { key: 'character',         label: 'Doplňující charakter', type: 'multiselect' },
+      { key: 'usage',             label: 'Užití',                type: 'multiselect' },
+      { key: 'platform',          label: 'Platforma',            type: 'multiselect' },
+      // { key: '', label: '', type: 'multiselect' },
+      // { key: 'variable_font',  label: 'Variable Font',  type: 'boolean'     },
+    ];
 
-  function extract_prop_int(list, prop) {
-    const values = list
-      .map(item => item?.[prop])
-      .filter(v => v != null);        // drop null/undefined
 
-    return [...new Set(values)]
-      .sort((a, b) => a - b);
-  }
+    /* ══════════════════════════════════════════════════════════
+     * ALPINE APP
+     * ══════════════════════════════════════════════════════════ */
+    function fontApp() {
+      return {
+        fonts:          [],
+        filterDefs:     filterDefs,
+        cardProperties: cardProperties,
+        openMenu:       null,
 
-  // Get data from json file
-  const data = {{ site.data.fonts.fonts | jsonify }};
+        /*
+         * `selections` is the single reactive store for ALL filter state.
+         * Built from filterDefs at init():
+         *   multiselect → []     (array of currently-selected values)
+         *   boolean     → false  (checkbox state)
+         *
+         * No per-filter variables anywhere else in the app.
+         */
+        selections: {},
 
-  return {
-    data,
-    // filters object: property → available values
-    filters: {
-      // typeface: extract_prop(data, "typeface"), 
-      foundry: extract_prop(data, "foundry", Locale),
-      id: extract_prop_int(data, "id"),
-    },
+        /* ──────────────────────────────────────────────
+         * Helpers
+         * ────────────────────────────────────────────── */
 
-    // selected values per property
-    selected: {
-      foundry: [],
-      id: [],
-      //source: [],
-    },
+        /** Current selection array for a multiselect filter. */
+        activeSelections(key) {
+          return this.selections[key] || [];
+        },
 
-    toggle(prop, value) {
-      const arr = this.selected[prop];
-      if (arr.includes(value)) {
-        this.selected[prop] = arr.filter(v => v !== value);
-      } else {
-        this.selected[prop].push(value);
-      }
-    },
+        /** Add or remove a value from a multiselect filter. */
+        toggleMulti(key, value) {
+          const arr = this.selections[key];
+          const idx = arr.indexOf(value);
+          if (idx === -1) arr.push(value);
+          else            arr.splice(idx, 1);
+        },
 
-    get filtered() {
-      return this.data.filter(item => {
-        return Object.keys(this.selected).every(prop => {
-          const selectedVals = this.selected[prop];
-          if (selectedVals.length === 0) return true;
-          return selectedVals.includes(item[prop]);
-        });
-      });
+        /** Sorted distinct non-empty values of `key` across all fonts. */
+        uniqueValues(key) {
+          return [
+            ...new Set(
+              this.fonts
+                .map(f => f[key])
+                .filter(v => v !== null && v !== undefined && v !== '')
+            )
+          ].sort((a, b) => String(a).localeCompare(String(b)));
+        },
+
+        /* ──────────────────────────────────────────────
+         * Filtering  — all logic lives here, driven by filterDefs
+         * ────────────────────────────────────────────── */
+
+        get filteredFonts() {
+          return this.fonts.filter(font =>
+            this.filterDefs.every(filter => {
+              switch (filter.type) {
+                case 'multiselect': {
+                  const sel = this.selections[filter.key] || [];
+                  return sel.length === 0 || sel.includes(font[filter.key]);
+                }
+                case 'boolean':
+                  return !this.selections[filter.key] || font[filter.key] === true;
+                default:
+                  return true; // unknown type → no constraint (forward-compatible)
+              }
+            })
+          );
+        },
+
+        get hasActiveFilters() {
+          return this.filterDefs.some(filter => {
+            switch (filter.type) {
+              case 'multiselect': return (this.selections[filter.key] || []).length > 0;
+              case 'boolean':     return !!this.selections[filter.key];
+              default:            return false;
+            }
+          });
+        },
+
+        clearFilters() {
+          this.filterDefs.forEach(filter => {
+            switch (filter.type) {
+              case 'multiselect': this.selections[filter.key] = []; break;
+              case 'boolean':     this.selections[filter.key] = false; break;
+            }
+          });
+        },
+
+        /* ──────────────────────────────────────────────
+         * Formatting
+         * ────────────────────────────────────────────── */
+        formatValue(val) {
+          if (val === null || val === undefined || val === '') return '—';
+          if (typeof val === 'boolean') return val ? 'Yes' : 'No';
+          return val;
+        },
+
+        /* ──────────────────────────────────────────────
+         * Init
+         * ────────────────────────────────────────────── */
+        init() {
+          // Build the reactive selections object from filterDefs
+          const sel = {};
+          filterDefs.forEach(filter => {
+            sel[filter.key] = filter.type === 'multiselect' ? [] : false;
+          });
+          this.selections = sel;
+          this.fonts = data;
+        }
+      };
     }
-  };
-}
-</script>
-
-  <div>
-    {%- include footer.html -%}
-  </div>
-  </body>
+  </script>
+</body>
 </html>
