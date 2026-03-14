@@ -1,0 +1,2510 @@
+cols:
+- id: font_name
+  title: Název fontu
+- id: type_foundry
+  title: Písmolijna
+- id: nr_weights
+  title: Počet řezů
+- id: variable_font
+  title: Variabilní
+- id: trials_opensource
+  title: Trialy/Open-source
+- id: width_proportion
+  title: Šířková proporce
+- id: type_style
+  title: Charakter
+- id: character
+  title: Doplňující charakter
+- id: usage
+  title: Užití
+- id: platform
+  title: Platforma
+fonts:
+- font_name: Yolo Text
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '9'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Text
+  platform: []
+  url: https://www.suitcasetype.com/fonts/yolo-text
+- font_name: Yolo Info
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '10'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://www.suitcasetype.com/fonts/yolo-info/
+- font_name: Yolo Body
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '10'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Text
+  platform: []
+  url: https://www.suitcasetype.com/fonts/yolo-body
+- font_name: Yolo display
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '9'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Titulkové
+  platform: []
+  url: https://www.suitcasetype.com/fonts/yolo-display
+- font_name: Eroticon
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '2'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - Patkové
+  character:
+  - Art-deco
+  usage:
+  - Titulkové
+  platform: []
+  url: https://www.suitcasetype.com/fonts/eroticon
+- font_name: Icona Serif
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '12'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage: []
+  platform: []
+  url: https://www.suitcasetype.com/fonts/icona-serif
+- font_name: Icona Sans
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '16'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://www.suitcasetype.com/fonts/icona-sans
+- font_name: Franci
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '12'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  - Futuristické
+  - Inline
+  usage: []
+  platform: []
+  url: https://www.suitcasetype.com/fonts/franci
+- font_name: Lipo
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '63'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  - Extended
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://www.suitcasetype.com/fonts/lipo
+- font_name: Lipo text
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '14'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  platform: []
+  url: https://www.suitcasetype.com/fonts/lipo-https://www.suitcasetype.com/fonts/lipo-text
+- font_name: Atyp Kido
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '6'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  - Zakulacené
+  usage: []
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/atyp-kido
+- font_name: Crabath
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '72'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Titulkové
+  - Knižní
+  - Text
+  platform: []
+  url: https://www.suitcasetype.com/fonts/crabath
+- font_name: Benda
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '5'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Ručně psané
+  usage:
+  - Titulkové
+  platform:
+  - Adobe fonts
+  url: https://www.suitcasetype.com/fonts/benda
+- font_name: Atyp BL
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '24'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Titulkové
+  - Webové písmo
+  - Text
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/atyp-bl
+- font_name: Atyp
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '24'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Titulkové
+  - Webové písmo
+  - Text
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/atyp
+- font_name: Tabac Big Slab
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '16'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - Patkové
+  character:
+  - Slab Serif
+  usage:
+  - Titulkové
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/tabac-big-slab
+- font_name: Tabac Big Sans
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '16'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Titulkové
+  - Text
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/tabac-big-sans
+- font_name: Tabac Big Glam
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '16'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Elegantní
+  usage:
+  - Titulkové
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/tabac-big-glam
+- font_name: Tabac Big
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '16'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Titulkové
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/tabac-big
+- font_name: Tabac Micro
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '8'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Užití v malých velikostech
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/tabac-micro
+- font_name: Tabac Glam
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '32'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Elegantní
+  usage:
+  - Titulkové
+  - Webové písmo
+  - Text
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/tabac-glam
+- font_name: Tabac Mono
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '16'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/tabac-mono
+- font_name: Tabac Slab
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '16'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character:
+  - Slab Serif
+  usage: []
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/tabac-slab
+- font_name: Tabac Sans
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '16'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/tabac-sans
+- font_name: Tabac
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '32'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character:
+  - Elegantní
+  usage:
+  - Titulkové
+  - Text
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/tabac
+- font_name: Jaroslav
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '10'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Titulkové
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/jaroslav
+- font_name: Pepi/Rudi
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '40'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  - Patkové
+  character:
+  - Geometrické
+  usage:
+  - Titulkové
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/pepi-rudi
+- font_name: Pacifista
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '10'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  - Stencil
+  usage:
+  - Titulkové
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/pacifista
+- font_name: Urban Grotesk
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '12'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/urban-grotesk
+- font_name: Ladislav
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '13'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/ladislav
+- font_name: Monopol
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '12'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Titulkové
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/monopol
+- font_name: Idealista
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '12'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Titulkové
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/idealista
+- font_name: Kulturista
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '12'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character:
+  - Slab Serif
+  usage:
+  - Titulkové
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/kulturista
+- font_name: Nudista
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '12'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  - Informační systémy
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/nudista
+- font_name: Comenia Sans
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '12'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  - Informační systémy
+  - Užití v malých velikostech
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/comenia-sans
+- font_name: Metalista
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '3'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Gotické
+  usage:
+  - Titulkové
+  platform:
+  - Adobe fonts
+  url: https://www.suitcasetype.com/fonts/metalista
+- font_name: Bistro Script
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '1'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Ručně psané
+  usage:
+  - Titulkové
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/bistro-script
+- font_name: Corpulent
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '1'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Zakulacené
+  usage:
+  - Titulkové
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/corpulent
+- font_name: Purista
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '10'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/purista
+- font_name: Gloriola
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '14'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Titulkové
+  - Text
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/gloriola
+- font_name: Sandwich
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '1'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Ručně psané
+  usage:
+  - Titulkové
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/sandwich
+- font_name: Teimer
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '8'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Text
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/teimer
+- font_name: Dederon Serif
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '8'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Knižní
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/dederon-serif
+- font_name: Dederon Sans
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '8'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Knižní
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/dederon-sans
+- font_name: Botanika
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '16'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/botanika
+- font_name: Orgovan
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '6'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Ručně psané
+  - Zakulacené
+  usage:
+  - Titulkové
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/orgovan
+- font_name: Katarine
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '12'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/katarine
+- font_name: RePublic
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '12'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Text
+  - Knižní
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/republic
+- font_name: Fishmonger
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '50'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  - Extended
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform:
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/fishmonger
+- font_name: Magion
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '2'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Titulkové
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/magion
+- font_name: Atrament
+  type_foundry: Suitcase Type Foundry
+  nr_weights: '10'
+  variable_font: ''
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform:
+  - Adobe fonts
+  - Fontstand
+  url: https://www.suitcasetype.com/fonts/atrament
+- font_name: Aguzzo
+  type_foundry: Displaay
+  nr_weights: '14'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Knižní
+  platform: []
+  url: https://displaay.net/typeface/aguzzo
+- font_name: Coxx
+  type_foundry: Displaay
+  nr_weights: '14'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Titulkové
+  platform: []
+  url: https://displaay.net/typeface/coxx
+- font_name: Boonton
+  type_foundry: Displaay
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  platform: []
+  url: https://displaay.net/typeface/booton
+- font_name: Serrrif
+  type_foundry: Displaay
+  nr_weights: '84'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  - Monospace
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Užití v malých velikostech
+  - Text
+  platform: []
+  url: https://displaay.net/typeface/serrif
+- font_name: Season
+  type_foundry: Displaay
+  nr_weights: '36'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/season
+- font_name: Fenul
+  type_foundry: Displaay
+  nr_weights: '24'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - Patkové
+  character:
+  - Elegantní
+  usage:
+  - Knižní
+  - Titulkové
+  platform: []
+  url: https://displaay.net/typeface/fenul
+- font_name: Perfekkta
+  type_foundry: Displaay
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  - Titulkové
+  platform: []
+  url: https://displaay.net/typeface/perfektta
+- font_name: Concrette
+  type_foundry: Displaay
+  nr_weights: '48'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/concrette
+- font_name: Jokker
+  type_foundry: Displaay
+  nr_weights: '14'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/jokker
+- font_name: Bagoss
+  type_foundry: Displaay
+  nr_weights: '36'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  - Extended
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/bagoss
+- font_name: Azeret
+  type_foundry: Displaay
+  nr_weights: '48'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Futuristické
+  usage:
+  - Webové písmo
+  platform: []
+  url: https://displaay.net/typeface/azeret
+- font_name: Azeret Mono
+  type_foundry: Displaay
+  nr_weights: '1'
+  variable_font: ''
+  trials_opensource: Open-source
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Futuristické
+  usage:
+  - Webové písmo
+  platform: []
+  url: https://fonts.google.com/specimen/Azeret+Mono
+- font_name: Avantt
+  type_foundry: Displaay
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Titulkové
+  - Text
+  platform: []
+  url: https://displaay.net/typeface/avantt
+- font_name: Denim
+  type_foundry: Displaay
+  nr_weights: '48'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Extended
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Užití v malých velikostech
+  - Text
+  platform: []
+  url: https://displaay.net/typeface/denim
+- font_name: Ofform
+  type_foundry: Displaay
+  nr_weights: '2'
+  variable_font: Ne
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Futuristické
+  usage:
+  - Titulkové
+  platform: []
+  url: https://displaay.net/typeface/ofform
+- font_name: Saans
+  type_foundry: Displaay
+  nr_weights: '36'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/saans
+- font_name: Greed
+  type_foundry: Displaay
+  nr_weights: '60'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  - Extended
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/greed
+- font_name: Haffer
+  type_foundry: Displaay
+  nr_weights: '96'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/haffer
+- font_name: Teodor
+  type_foundry: Displaay
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/teodor
+- font_name: Tobias
+  type_foundry: Displaay
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/tobias
+- font_name: Roobert
+  type_foundry: Displaay
+  nr_weights: '36'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/roobert
+- font_name: Lazzer
+  type_foundry: Displaay
+  nr_weights: '14'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  platform: []
+  url: https://displaay.net/typeface/lazzer
+- font_name: Dazzed
+  type_foundry: Displaay
+  nr_weights: '14'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  platform: []
+  url: https://displaay.net/typeface/dazzed
+- font_name: Documan STC
+  type_foundry: Displaay
+  nr_weights: '1'
+  variable_font: Ne
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Stencil
+  - Zakulacené
+  usage:
+  - Titulkové
+  platform: []
+  url: https://displaay.net/typeface/documan
+- font_name: Documan
+  type_foundry: Displaay
+  nr_weights: '27'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Zakulacené
+  - Stencil
+  usage:
+  - Titulkové
+  platform: []
+  url: https://displaay.net/typeface/documan
+- font_name: Wallop
+  type_foundry: Displaay
+  nr_weights: '14'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/wallop
+- font_name: Reckless
+  type_foundry: Displaay
+  nr_weights: '14'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  - Extended
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Text
+  - Titulkové
+  platform: []
+  url: https://displaay.net/typeface/reckless
+- font_name: Matter
+  type_foundry: Displaay
+  nr_weights: '96'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/matter
+- font_name: Fellix
+  type_foundry: Displaay
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/fellix
+- font_name: Gellix
+  type_foundry: Displaay
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/gellix
+- font_name: Hellix
+  type_foundry: Displaay
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/hellix
+- font_name: Yellix
+  type_foundry: Displaay
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://displaay.net/typeface/yellix
+- font_name: Grain
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/grain
+- font_name: Edgy
+  type_foundry: Superior Type
+  nr_weights: '6'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  - Dekorativní
+  character:
+  - Zakulacené
+  usage:
+  - Titulkové
+  platform: []
+  url: https://superiortype.com/fonts/grain
+- font_name: Typograf
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/typograf
+- font_name: Typograf Condensed
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/typograf-condensed
+- font_name: Typograf ExtraCondensed
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/typograf-extracondensed
+- font_name: Svatopluk Max
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  - Dekorativní
+  character:
+  - Futuristické
+  usage:
+  - Titulkové
+  platform: []
+  url: https://superiortype.com/fonts/svatopluk-max
+- font_name: Svatopluk
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/svatopluk
+- font_name: Restart Hard
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/restart-hard
+- font_name: Restart Soft
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/restart-soft
+- font_name: Restart Ginger
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/restart-ginger
+- font_name: Prizma
+  type_foundry: Superior Type
+  nr_weights: '12'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Elegantní
+  usage:
+  - Titulkové
+  platform: []
+  url: https://superiortype.com/fonts/prizma
+- font_name: Micro
+  type_foundry: Superior Type
+  nr_weights: '14'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Zakulacené
+  - Geometrické
+  usage:
+  - Titulkové
+  - Text
+  platform: []
+  url: https://superiortype.com/fonts/micro
+- font_name: Epika ExtraCondensed
+  type_foundry: Superior Type
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - Patkové
+  character:
+  - Elegantní
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/epika-extracondensed
+- font_name: Epika Condensed
+  type_foundry: Superior Type
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - Patkové
+  character:
+  - Elegantní
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/epika-condensed
+- font_name: Epika
+  type_foundry: Superior Type
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character:
+  - Elegantní
+  usage:
+  - Text
+  platform: []
+  url: https://superiortype.com/fonts/epika
+- font_name: Epika Expanded
+  type_foundry: Superior Type
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Extended
+  type_style:
+  - Patkové
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/epika-expanded
+- font_name: Serial
+  type_foundry: Superior Type
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/seriál
+- font_name: Raptor V1
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Text
+  platform: []
+  url: https://superiortype.com/fonts/raptor-v1
+- font_name: Raptor V2
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Text
+  platform: []
+  url: https://superiortype.com/fonts/raptor-v2
+- font_name: Raptor V3
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Text
+  platform: []
+  url: https://superiortype.com/fonts/raptor-v3
+- font_name: Nika Expanded
+  type_foundry: Superior Type
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Extended
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/nika-expanded
+- font_name: 'Nika '
+  type_foundry: Superior Type
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/nika
+- font_name: Nika Condensed
+  type_foundry: Superior Type
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/nika-condensed
+- font_name: Nika ExtraCondensed
+  type_foundry: Superior Type
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/nika-extracondensed
+- font_name: Lenora
+  type_foundry: Superior Type
+  nr_weights: '8'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character:
+  - Elegantní
+  usage:
+  - Titulkové
+  platform: []
+  url: https://superiortype.com/fonts/lenora)
+- font_name: Lenora Grade
+  type_foundry: Superior Type
+  nr_weights: '8'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character:
+  - Elegantní
+  usage:
+  - Titulkové
+  platform: []
+  url: https://superiortype.com/fonts/lenora-grade
+- font_name: Trans Sans
+  type_foundry: Superior Type
+  nr_weights: '8'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/trans-sans
+- font_name: Mixtape ExtraCondensed
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  - Užití v malých velikostech
+  platform: []
+  url: https://superiortype.com/fonts/mixtape-extracondensed
+- font_name: Mixtape Condensed
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  - Užití v malých velikostech
+  platform: []
+  url: https://superiortype.com/fonts/mixtape-condensed
+- font_name: Mixtape
+  type_foundry: Superior Type
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  - Užití v malých velikostech
+  platform: []
+  url: https://superiortype.com/fonts/mixtape
+- font_name: Gradient
+  type_foundry: Superior Type
+  nr_weights: '8'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/gradient
+- font_name: Gradient Gothic
+  type_foundry: Superior Type
+  nr_weights: '8'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Gotické
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/gradient-gothic
+- font_name: Gradient Comic
+  type_foundry: Superior Type
+  nr_weights: '8'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Zakulacené
+  usage: []
+  platform: []
+  url: https://superiortype.com/fonts/gradient-comic
+- font_name: NC Burrata
+  type_foundry: Netvarec Type
+  nr_weights: '12'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  - Text
+  platform: []
+  url: https://nctype.com/nc-burrata/
+- font_name: NC Fortina
+  type_foundry: Netvarec Type
+  nr_weights: '12'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  platform: []
+  url: https://nctype.com/nc-fontina/
+- font_name: NC Kobyla
+  type_foundry: Netvarec Type
+  nr_weights: '6'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Text
+  - Webové písmo
+  platform: []
+  url: https://nctype.com/nc-kobyla/
+- font_name: FK Grotesk
+  type_foundry: Florian Karsten Typefaces
+  nr_weights: '32'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  - Titulkové
+  platform: []
+  url: https://fonts.floriankarsten.com/fk-grotesk
+- font_name: FK Grotesk Neue
+  type_foundry: Florian Karsten Typefaces
+  nr_weights: '12'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://fonts.floriankarsten.com/fk-grotesk-neue
+- font_name: FK Screamer
+  type_foundry: Florian Karsten Typefaces
+  nr_weights: '4'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Titulkové
+  platform: []
+  url: https://fonts.floriankarsten.com/fk-screamer
+- font_name: FK Roman Standard
+  type_foundry: Florian Karsten Typefaces
+  nr_weights: '12'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Knižní
+  platform: []
+  url: https://fonts.floriankarsten.com/fk-roman-standard
+- font_name: FK Raster Grotesk
+  type_foundry: Florian Karsten Typefaces
+  nr_weights: '8'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  - Dekorativní
+  character:
+  - Pixelované
+  usage:
+  - Titulkové
+  platform: []
+  url: https://fonts.floriankarsten.com/fk-raster-grotesk
+- font_name: FK Raster Roman
+  type_foundry: Florian Karsten Typefaces
+  nr_weights: '4'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  - Dekorativní
+  character:
+  - Pixelované
+  usage:
+  - Titulkové
+  platform: []
+  url: https://fonts.floriankarsten.com/fk-raster-grotesk
+- font_name: FK Display
+  type_foundry: Florian Karsten Typefaces
+  nr_weights: '2'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Titulkové
+  platform: []
+  url: https://fonts.floriankarsten.com/fk-display
+- font_name: Space Grotesk
+  type_foundry: Florian Karsten Typefaces
+  nr_weights: '4'
+  variable_font: Ano
+  trials_opensource: Open-source
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform:
+  - Google fonts
+  url: https://fonts.floriankarsten.com/space-grotesk
+- font_name: Montagu Slab
+  type_foundry: Florian Karsten Typefaces
+  nr_weights: '14'
+  variable_font: Ano
+  trials_opensource: Open-source
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Text
+  - Titulkové
+  platform:
+  - Google fonts
+  url: https://fonts.floriankarsten.com/montagu-slab
+- font_name: Uniforma
+  type_foundry: KOMETA Typefaces
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://kometatype.com/typefaces/uniforma
+- font_name: Victor Serif
+  type_foundry: KOMETA Typefaces
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Text
+  - Titulkové
+  platform: []
+  url: https://kometatype.com/typefaces/victor-serif
+- font_name: Stabil Grotesk
+  type_foundry: KOMETA Typefaces
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://kometatype.com/typefaces/stabil-grotesk
+- font_name: Labil Grotesk
+  type_foundry: KOMETA Typefaces
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  - Dekorativní
+  character: []
+  usage:
+  - Text
+  - Titulkové
+  platform: []
+  url: https://kometatype.com/typefaces/labil-grotesk
+- font_name: Victor Narrow
+  type_foundry: KOMETA Typefaces
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - Patkové
+  character:
+  - Elegantní
+  usage: []
+  platform: []
+  url: https://kometatype.com/typefaces/victor-narrow
+- font_name: Attila
+  type_foundry: KOMETA Typefaces
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Extended
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Elegantní
+  usage: []
+  platform: []
+  url: https://kometatype.com/typefaces/attila
+- font_name: A Gothic
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '4'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Titulkové
+  platform: []
+  url: https://radimpesko.com/fonts/a-gothic
+- font_name: AA Gothic
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '2'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Titulkové
+  platform: []
+  url: https://radimpesko.com/fonts/aa-gothic
+- font_name: Agipo
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '9'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  platform: []
+  url: https://radimpesko.com/fonts/agipo
+- font_name: Correspondance
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '1'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: ''
+- font_name: Dear Sir Madam
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '2'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Text
+  - Titulkové
+  platform: []
+  url: https://radimpesko.com/fonts/dear-sir-madam
+- font_name: F Grotesk
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '8'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://radimpesko.com/fonts/f-grotesk
+- font_name: Fugue
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '5'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Text
+  - Titulkové
+  platform: []
+  url: https://radimpesko.com/fonts/fugue
+- font_name: Girott
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '2'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://radimpesko.com/fonts/girott
+- font_name: Kin
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '1'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Titulkové
+  platform: []
+  url: https://radimpesko.com/fonts/kin
+- font_name: Larish Alte
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '1'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Knižní
+  - Text
+  platform: []
+  url: https://radimpesko.com/fonts/larish-alte
+- font_name: Larish Neue
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '2'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Knižní
+  - Text
+  platform: []
+  url: https://radimpesko.com/fonts/larish-neue
+- font_name: Lyno
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '4'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Futuristické
+  - Zakulacené
+  usage:
+  - Titulkové
+  platform: []
+  url: https://radimpesko.com/fonts/l-no
+- font_name: Merkury
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '9'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Zakulacené
+  usage:
+  - Titulkové
+  - Text
+  platform: []
+  url: https://radimpesko.com/fonts/merkury
+- font_name: Paabo
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '12'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Geometrické
+  usage:
+  - Titulkové
+  platform: []
+  url: https://radimpesko.com/fonts/paabo
+- font_name: Renotype
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '5'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Zakulacené
+  usage:
+  - Titulkové
+  platform: []
+  url: https://www.205.tf/renotype
+- font_name: Septima
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '1'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  platform: []
+  url: https://radimpesko.com/fonts/septima
+- font_name: Union
+  type_foundry: RP Digital Type Foundry
+  nr_weights: '4'
+  variable_font: Ne
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage: []
+  platform: []
+  url: https://radimpesko.com/fonts/union
+- font_name: Adapter Mono
+  type_foundry: Rosetta
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Monospace
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  - Text
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/AdapterMonoPE
+- font_name: Adapter PE
+  type_foundry: Rosetta
+  nr_weights: '34'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  - Text
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/AdapterPE
+- font_name: Adelphi
+  type_foundry: Rosetta
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Geometrické
+  usage:
+  - Webové písmo
+  - Text
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/AdelphiPE
+- font_name: Aeropa
+  type_foundry: Rosetta
+  nr_weights: '12'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  - Text
+  - Titulkové
+  platform: []
+  url: https://rosettatype.com/AeropaPE
+- font_name: Aisha
+  type_foundry: Rosetta
+  nr_weights: '5'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Ručně psané
+  usage:
+  - Webové písmo
+  - Text
+  - Titulkové
+  platform: []
+  url: https://rosettatype.com/AishaLatin
+- font_name: Arek
+  type_foundry: Rosetta
+  nr_weights: '8'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Knižní
+  - Text
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/ArekLatin
+- font_name: Avory
+  type_foundry: Rosetta
+  nr_weights: '18'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  - Webové písmo
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/AvoryPE
+- font_name: Butik
+  type_foundry: Rosetta
+  nr_weights: '27'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character:
+  - Elegantní
+  usage: []
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/Butik
+- font_name: Clone
+  type_foundry: Rosetta
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Webové písmo
+  platform: []
+  url: https://rosettatype.com/ClonePE
+- font_name: Clone Rounded
+  type_foundry: Rosetta
+  nr_weights: '16'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Zakulacené
+  usage: []
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/CloneRoundedPE
+- font_name: Corsair
+  type_foundry: Rosetta
+  nr_weights: '1'
+  variable_font: Ne
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character:
+  - Ručně psané
+  usage: []
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/CorsairPE
+- font_name: Eskorte
+  type_foundry: Rosetta
+  nr_weights: '10'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Knižní
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/EskorteLatin
+- font_name: Gitan
+  type_foundry: Rosetta
+  nr_weights: '10'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Knižní
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/GitanLatin
+- font_name: Gridlite
+  type_foundry: Rosetta
+  nr_weights: '1'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Monospace
+  type_style:
+  - Dekorativní
+  character:
+  - Pixelované
+  - Futuristické
+  usage:
+  - Titulkové
+  - Webové písmo
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/GridlitePE
+- font_name: Handjet
+  type_foundry: Rosetta
+  nr_weights: '1'
+  variable_font: Ano
+  trials_opensource: Open-source
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Pixelované
+  - Futuristické
+  usage:
+  - Titulkové
+  - Webové písmo
+  platform:
+  - Google fonts
+  url: https://fonts.google.com/specimen/Handjet?query=handjet
+- font_name: Handjet
+  type_foundry: Rosetta
+  nr_weights: '1'
+  variable_font: Ano
+  trials_opensource: ''
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Pixelované
+  - Futuristické
+  usage:
+  - Titulkové
+  - Webové písmo
+  platform: []
+  url: https://rosettatype.com/Handjet
+- font_name: Nassim
+  type_foundry: Rosetta
+  nr_weights: '10'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Text
+  - Knižní
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/NassimLatin
+- font_name: Neacademia
+  type_foundry: Rosetta
+  nr_weights: '8'
+  variable_font: Ne
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Text
+  - Knižní
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/Neacademia
+- font_name: Nova Caps
+  type_foundry: Rosetta
+  nr_weights: '32'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  - Extended
+  type_style:
+  - Patkové
+  character:
+  - Elegantní
+  - Art-deco
+  usage:
+  - Knižní
+  - Titulkové
+  - Webové písmo
+  platform: []
+  url: https://rosettatype.com/NovaCaps
+- font_name: Skolar
+  type_foundry: Rosetta
+  nr_weights: '10'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Knižní
+  - Text
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/SkolarPE
+- font_name: Skolar Sans
+  type_foundry: Rosetta
+  nr_weights: '72'
+  variable_font: Ano
+  trials_opensource: Dostupné trialy
+  width_proportion:
+  - Condensed
+  - Extended
+  type_style:
+  - 'Bezpatkové '
+  character: []
+  usage:
+  - Text
+  - Webové písmo
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/SkolarSansPE
+- font_name: Satturah
+  type_foundry: Rosetta
+  nr_weights: '1'
+  variable_font: Ne
+  trials_opensource: Dostupné trialy
+  width_proportion: []
+  type_style:
+  - Dekorativní
+  character:
+  - Skript
+  usage:
+  - Titulkové
+  platform:
+  - Adobe fonts
+  url: https://rosettatype.com/Sutturah
+- font_name: Yrsa
+  type_foundry: Rosetta
+  nr_weights: '10'
+  variable_font: Ano
+  trials_opensource: Open-source
+  width_proportion: []
+  type_style:
+  - Patkové
+  character: []
+  usage:
+  - Text
+  - Webové písmo
+  platform:
+  - Adobe fonts
+  - Google fonts
+  url: https://fonts.google.com/specimen/Yrsa
